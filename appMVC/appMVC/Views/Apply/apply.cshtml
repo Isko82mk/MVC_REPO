@@ -1,0 +1,36 @@
+﻿@using appMVC.Models
+
+@model Car
+
+<style>
+    body {
+        background-size:cover;
+        background-position:center;
+        background-repeat:no-repeat;
+        background-image: url(https://img.favcars.com/zastava/yugo-55/pictures_zastava_yugo_55_1984_1_b.jpg);
+    }
+    .car_name{
+    
+        color:black;
+    }
+    .car_model{
+        color:red;
+    }
+
+    .car_color{
+        color:darkblue;
+    }
+
+    .car_color,
+    .car_model,
+    .car_name {
+        background-color: aquamarine;
+        text-align: center;
+    }
+
+</style>
+
+<h1 class="car_name">Car name: @{ @Model.Name;}</h1>
+<h1 class="car_color">  Car color: @{ @Model.Color;}</h1>
+<h1 class="car_model">Car model : @{ @Model.Model;}</h1>
+
