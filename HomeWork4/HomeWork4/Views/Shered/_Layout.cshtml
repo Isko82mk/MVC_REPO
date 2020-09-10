@@ -1,0 +1,46 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library app</title>
+    
+    @*myCss*@
+<link href="~/css/site.css" rel="stylesheet" />
+    @* libraryes *@
+<link href="~/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
+<link href="~/lib/bootstrap/css/bootstrap-grid.css" rel="stylesheet" />
+<link href="~/lib/bootstrap/css/bootstrap-reboot.css" rel="stylesheet" />
+</head>
+
+<body>
+   
+    <div class="container">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+
+                    <li><a asp-controller="Home" asp-action="Index" class="nav-link">Home</a></li>
+                    <li><a asp-controller="Home" asp-action="Rents" class="nav-link">Rentals</a></li>
+
+                </ul>
+            </div>
+        </nav>
+
+
+
+
+        @RenderBody()
+
+
+        <footer>Footer</footer>
+    </div>
+    @* libraryes *@
+    <script src="~/lib/jQuery/jquery.js"></script>
+    <script src="~/lib/bootstrap/js/bootstrap.js"></script>
+</body>
+</html>
