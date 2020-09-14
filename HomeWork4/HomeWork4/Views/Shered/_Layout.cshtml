@@ -5,11 +5,11 @@
     <title>Library app</title>
     
     @*myCss*@
-<link href="~/css/site.css" rel="stylesheet" />
+<link href="~/css/site.css" rel="stylesheet"/>
     @* libraryes *@
-<link href="~/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
-<link href="~/lib/bootstrap/css/bootstrap-grid.css" rel="stylesheet" />
-<link href="~/lib/bootstrap/css/bootstrap-reboot.css" rel="stylesheet" />
+<link href="~/lib/bootstrap/css/bootstrap.css" rel="stylesheet"/>
+<link href="~/lib/bootstrap/css/bootstrap-grid.css" rel="stylesheet"/>
+<link href="~/lib/bootstrap/css/bootstrap-reboot.css" rel="stylesheet"/>
 </head>
 
 <body>
@@ -17,23 +17,21 @@
     <div class="container">
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="#">BookApp</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
 
-                    <li><a asp-controller="Home" asp-action="Index" class="nav-link">Home</a></li>
-                    <li><a asp-controller="Home" asp-action="Rents" class="nav-link">Rentals</a></li>
+                    <li><a asp-controller="Rent" asp-action="Titles" class="nav-link">Home</a></li>
+                    <li><a asp-controller="Rent" asp-action="Rents" class="nav-link">Rents</a></li>
+                    <li><a asp-controller="Home" asp-action="About" class="nav-link">About</a></li>
+
 
                 </ul>
             </div>
         </nav>
-
-
-
-
         @RenderBody()
 
 

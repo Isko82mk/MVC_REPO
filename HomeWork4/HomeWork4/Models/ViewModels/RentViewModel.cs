@@ -11,9 +11,11 @@ namespace HomeWork4.Models.ViewModels
         public int Id { get; set; }
         public string FullName { get; set; }
         public string Addres { get; set; }
-        public long Contact { get; set; }
+        public long Phone { get; set; }
+        public User User { get; set; }
         public List<Book>Books { get; set; }
         public int Price { get; set; }
+        public bool isRented { get; set; }
 
     }
 }

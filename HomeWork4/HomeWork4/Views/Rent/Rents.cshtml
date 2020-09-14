@@ -1,0 +1,15 @@
+﻿@model RentsViewModel
+  
+
+  <div class="rents_book">
+
+      @{
+          foreach (var item in Model.Rents)
+          {
+              <partial name="~/Views/Shered/_Rent.cshtml" for="@item" />
+          }
+      }
+
+
+  </div>
+

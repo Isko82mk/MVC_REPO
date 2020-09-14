@@ -1,0 +1,14 @@
+﻿@model TitlesViewModels
+
+
+<div class="book_title">
+
+    @{
+        foreach (var book in Model.Books)
+        {
+            <partial name="~/Views/Shered/_BooksPartalView.cshtml" for="@book" />
+        }
+
+    }
+</div>
+

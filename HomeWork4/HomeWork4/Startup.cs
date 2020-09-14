@@ -40,7 +40,8 @@ namespace HomeWork4
                 routes.MapRoute
                 (
                     name:"default",
-                    template:"{controller=Home}/{action=index}/{id?}"
+                    template:"{controller=Rent}/{action=Titles}/{id?}"
+
                     );
             });
 

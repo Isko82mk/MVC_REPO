@@ -1,1 +1,23 @@
-﻿
+﻿.book_title{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+    .book_title > div, .rents_book>div {
+        margin-left: 10px;
+        margin-top: 15px;
+    }
+
+
+
+.rents_book {
+    display: flex;
+    flex-wrap:wrap;
+}
+
+.details_rent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

@@ -1,0 +1,94 @@
+﻿@model RentViewModel
+
+
+    <div class="card">
+
+        <h5 class="card-header">Book ID number : @Model.Id</h5>
+
+        <div class="card-body">
+            <h5 class="card-title">@Model.FullName</h5>
+
+            <div>
+                @foreach (var book in Model.Books)
+                {
+                    <partial name="~/Views/Shered/_BooksPartalView.cshtml" for="@book" />
+                }
+            </div>
+            <br />
+            <h4>Book Staus:</h4>
+
+            @if (Model.isRented)
+            {
+                <h5>Book is rented</h5>
+            }
+            else
+            {
+                <h5>Book is not rented</h5>
+            }
+
+            <a asp-controller="Rent" asp-action="Details" asp-route-id="@Model.Id"
+               class="btn btn-outline-success">Details</a>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+@*<div class="card" style="width: 18rem;">
+
+    <h5>User :@Model.FullName </h5>
+
+
+    @foreach (var book in Model.Books)
+    {
+        <partial name="~/Views/Shered/_BooksPartalView.cshtml" for="@book" />
+        <br />
+        <h2 style="text-align:center">Order status:</h2>
+        <br />
+        @if (Model.isRented)
+        {
+            <h3 style="text-align:center" ;>Book is rented</h3>
+        }
+        else
+        {
+            <h3 style="text-align:center" ;>Book is aveable for rent</h3>
+        }
+        <a asp-controller="Rent" asp-action="Details" asp-route-id="@Model.Id"
+           class="btn btn-outline-success">Details</a>
+    }
+</div>*@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*<span>Order status</span>
+@if (Model.isRented)
+{
+    <h3>Book is rented</h3>
+}
+else
+{
+    <h3>Book is aveable for rent</h3>
+}
+
+<a asp-controller="Rent" asp-action="Details" asp-route-id="@Model.Id"
+   class="btn btn-outline-success">Details</a>*@

@@ -1,28 +1,24 @@
 ﻿using HomeWork4.Models.DomainModels;
 using HomeWork4.Models.Enums;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Threading.Tasks;
 
 namespace HomeWork4
 {
     public static class DB
     {
-        public static List<Book> Books { get; set; }
-        public static List<User>Users { get; set;}
-        public static List<Rent> Rents { get; set;}
+        public static List<Book> Titles { get; set; }
+        public static List<User> Users { get; set; }
+        public static List<Rent> Rents { get; set; }
 
 
         static DB()
         {
-            Books = new List<Book>()
+            Titles = new List<Book>()
             {
                 new Book()
                 {
                     Id =1,
-                    Name="The Ultimate Hitchhiker's Guide ",
+                    Name="The Ultimate Hitchhiker's Guide",
                     Author ="Douglas Adams",
                     Genre = Genre.Commedy,
                     Price =5
@@ -90,22 +86,25 @@ namespace HomeWork4
                 new Rent()
                 {
                     Id=1,
-                    Books=new List<Book>(){Books[0]},
+                    Books= new List<Book>(){Titles[0]},
                     User = Users[0],
-                    Price = Books[0].Price
+                    Price = Titles[0].Price,
+                    isRented = true,
                 },
                 new Rent()
                 {
                     Id=2,
-                    Books=new List<Book>(){Books[0],Books[1]},
+                    Books= new List<Book>(){Titles[0],Titles[1]},
                     User = Users[2],
+                    isRented = true,
 
                 },
                 new Rent()
                 {
                     Id=3,
-                    Books=new List<Book>(){Books[2]},
+                    Books=new List<Book>(){Titles[2]},
                     User = Users[1],
+                    isRented = false,
 
                 },
 
@@ -123,7 +122,7 @@ namespace HomeWork4
 
         }
 
-         private static int BookPrice(List<Book> books)
+        private static int BookPrice(List<Book> books)
         {
             var total = 0;
 

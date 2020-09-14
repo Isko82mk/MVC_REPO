@@ -1,0 +1,42 @@
+﻿@model RentViewModel
+
+
+<h3>Name of the user : @Model.FullName</h3>
+<h3>Addres : @Model.Addres</h3>
+<h3>Price : @Model.Price</h3>
+<h3>Phone number @Model.Phone</h3>
+<br />
+<br />
+<br />
+
+
+<h3>Rented books :</h3>
+<div class="book_title">
+
+    @{
+        foreach (var book in Model.Books)
+        {
+            <partial name="~/Views/Shered/_BooksPartalView.cshtml" for="@book" />
+        }
+
+    }
+</div>
+
+<span>Order status</span>
+@if (Model.isRented)
+{
+    <h3>Book is rented</h3>
+}
+else
+{
+    <h3>Book is aveable for rent</h3>
+}
+
+<div>
+    <a asp-controller="Rent"
+       asp-action="Rents"
+       asp-route-id="@Model.Id"
+       class="btn btn-outline-primary">Back</a>
+</div>
+
+
