@@ -1,0 +1,21 @@
+﻿@model MenuViewModel
+
+<h1>MENU</h1>
+<p>
+  <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+   ADMIN PANEL
+  </a>
+<div class="collapse" id="collapseExample">
+    <div class="card card-body mb-4">
+        <a asp-controller="Order" asp-action="AddPizza" class="btn btn-info mb-2">Add Pizza</a>
+        <a asp-controller="Order" asp-action="UploadImg" class="btn btn-primary">Upload Img</a>
+    </div>
+</div>
+<div class="menu">
+    @foreach (var item in Model.Menu)
+    {
+        @*@Html.Partial("~/Views/Shared/_pizza.cshtml", item);*@
+        <partial name="~/Views/Shared/_pizza.cshtml" for="@item" />
+    }
+</div>
+

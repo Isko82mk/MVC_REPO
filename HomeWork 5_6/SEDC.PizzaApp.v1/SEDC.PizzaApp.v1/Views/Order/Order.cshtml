@@ -1,0 +1,42 @@
+﻿@model MakeOrderViewModel
+<h1>Welcome to order section</h1>
+
+<h2>Enter info to order :</h2>
+
+    <form asp-route="Order" method="post">
+        <label asp-for="FirstName"></label>
+        <input asp-for="FirstName" /><br />
+
+        <label asp-for="LastName"></label>
+        <input asp-for="LastName" /><br />
+
+        <label asp-for="Addres"></label>
+        <input asp-for="Addres" /><br />
+
+        <label asp-for="Phone"></label>
+        <input asp-for="Phone" /><br />
+
+
+        <label asp-for="PizzaName"></label>
+        <select asp-for="PizzaName">
+            @foreach (var item in Model.Pizzas)
+            {
+                <option value="@item">@item</option>
+            }
+        </select><br />
+
+        <label asp-for="Size"></label>
+        <select asp-for="Size" asp-items="Html.GetEnumSelectList<PizzaSize>()"></select>
+
+        <button type="submit" class="btn btn-block btn-group-lg btn-outline-primary">Submit</button>
+    </form>
+
+
+
+
+
+
+
+
+
+
