@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <AssemblyVersion>20.3.0.0</AssemblyVersion>
+    <FileVersion>20.3.0.0</FileVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SEDC.PizzaApp.DomainModels\SEDC.PizzaApp.DomainModels.csproj" />
+  </ItemGroup>
+
+</Project>

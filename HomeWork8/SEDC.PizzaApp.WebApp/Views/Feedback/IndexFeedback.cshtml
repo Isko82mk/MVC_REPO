@@ -1,0 +1,17 @@
+﻿@model FeedbackViewModel
+
+
+    <h1>Feedback page</h1>
+
+ 
+    <form asp-controller="Feedback" asp-action="IndexFeedback" method="post" >
+
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Leave Feedback</label>
+            <textarea asp-for="Comment" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-outline-primary">Submit your comment</button>
+    </form><br /><br />
+
+    <a asp-controller="Feedback" asp-action="GetComments" class="btn btn-outline-danger">View Comments</a>

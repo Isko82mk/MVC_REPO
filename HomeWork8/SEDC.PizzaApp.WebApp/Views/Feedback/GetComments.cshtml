@@ -1,0 +1,12 @@
+﻿@model FeedbackViewModel
+
+<h1>Some comments  of our satisfied customers</h1><br />
+<ul class="list-group">
+
+
+    @foreach (var item in Model.Commentns)
+    {
+        <li class="list-group-item">@item</li>
+    }
+
+</ul>
