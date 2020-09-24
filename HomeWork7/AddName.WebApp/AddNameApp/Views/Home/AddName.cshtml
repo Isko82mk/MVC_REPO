@@ -1,0 +1,12 @@
+﻿@model NameViewModel
+<h1>Add Name Page</h1>
+
+
+<form asp-controller="Home" asp-action="AddName" method="post">
+
+    <label asp-for="MyName"></label>
+    <input asp-for="MyName" />
+    <button type="submit">submit</button>
+</form>
+
+  

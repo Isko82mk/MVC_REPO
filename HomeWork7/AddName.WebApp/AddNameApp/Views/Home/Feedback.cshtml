@@ -1,0 +1,12 @@
+﻿@model FeedbackViewModel
+
+  
+
+<form asp-controller="Home" asp-action="Feedback" method="post">
+
+    <textarea asp-for="Comment"></textarea><br />
+    <button type="submit">Submit comment</button>
+    
+</form>
+
+<button><a asp-controller="Home" asp-action="GetAllFeedbacks">View All Comments</a></button>  

@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title - AddNameApp</title>
+    <style>
+       th,td,tr{
+           border:1px solid black;
+       }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+
+       
+        <ul class="nav">
+            <li class="nav-item ">
+                <a asp-controller="Home" asp-action="AddName">AddName</a>
+                <a asp-controller="Home" asp-action="GetNames">RenderNames</a>
+                <a asp-controller="Home" asp-action="Feedback">Feedback</a>
+            </li>
+        </ul>
+
+       
+
+        @*body*@
+        @RenderBody()
+
+    </div>
+
+
+</body>
+</html>
